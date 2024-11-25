@@ -9,21 +9,14 @@ cd sakunusa
 ```
 2. Set up the environment
    
-```bash
-# Optional: Create virtual environment
-pip install virtualenv
-virtualenv venv
-source venv/bin/activate for macOs/Linux
-source venv/Scripts/active for Windows
-
 # Install dependencies
-pip install -r requirements.txt
+```bash
+npm install
 ```
 
 3. Run the server
 
 ```bash
-flask run
+npm run start
 ```
-
-Server will run on port 5000
+Server will run on port 8000
