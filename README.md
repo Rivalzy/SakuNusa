@@ -9,7 +9,7 @@ cd sakunusa
 ```
 2. Set up the environment
    
-# Install dependencies
+## Install dependencies
 ```bash
 npm install
 ```

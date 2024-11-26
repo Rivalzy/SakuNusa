@@ -1,12 +1,13 @@
 // import express dan router
 const express = require("express");
 const cors = require("cors");
+const User = require("./routes/user");
 
 // import dotenv dan menjalankan method config
-require("dotenv").config();
+// require("dotenv").config();
 
 // destructing object process.env
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 8000;
 
 // membuat object express
 const app = express();
@@ -16,12 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 // menggunakan routing (router)
-app.use(Route);
-
-app.get("/", (req, res) => {
-    console.log("Response success")
-    res.send("Response Success!")
-})
+app.use(User);
 
 // mendefinisikan port
 app.listen(PORT, () =>
