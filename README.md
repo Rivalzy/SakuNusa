@@ -1,5 +1,9 @@
 # SakuNusa Backend
 
+### Architecture Cloud
+![](assets/Architecture_cloud.png)
+
+---
 ### API Specification for SakuNusa
 **Base URL:**
 ```
@@ -16,8 +20,8 @@ cd sakunusa
 ```
 2. Set up the environment
    
-## Install dependencies
 ```bash
+## Install dependencies
 npm install
 ```
 
@@ -27,3 +31,5 @@ npm install
 npm run start
 ```
 Server will run on port 3000
+
+---
