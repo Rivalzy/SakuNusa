@@ -8,7 +8,7 @@ const Transaction = require("./routes/transaction");
 require("dotenv").config();
 
 // destructing object process.env
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3306;
 
 // membuat object express
 const app = express();

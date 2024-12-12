@@ -34,4 +34,5 @@ const verifyToken = (req, res, next) => {
   }
 };
 
+// export middleware auth
 module.exports = verifyToken;

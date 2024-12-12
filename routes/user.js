@@ -1,4 +1,6 @@
 const express = require("express");
+
+// import user controller
 const {
   getAllUsers,
   getUserById,
@@ -11,8 +13,10 @@ const {
 } = require("../controllers/userControll");
 const verifyToken = require("../middlewares/verifyToken");
 
+// membuat object router
 const router = express.Router();
 
+// membuat routing
 router.post("/register", createUser);
 router.post("/login", login);
 router.post("/auth/logout", verifyToken, logout);
@@ -24,4 +28,5 @@ router.get("/user", verifyToken, getUserById);
 router.put("/user/edit", verifyToken, updateUser);
 router.delete("/user", verifyToken, deleteUser);
 
+// export router
 module.exports = router;

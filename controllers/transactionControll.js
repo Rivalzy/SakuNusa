@@ -1,5 +1,5 @@
 const dayjs = require("dayjs");
-const db = require("../database");
+const db = require("../config/database");
 
 // exports.getTransactions = (req, res) => {
 //   const query = `
