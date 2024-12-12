@@ -6,6 +6,8 @@ WORKDIR /app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
+ENV JWT_SECRET = 
+ENV JWT_EXPIRES_IN = 1d
 ENV PORT 3000
 
 # Copy all source files
