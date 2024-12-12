@@ -18,8 +18,8 @@ router.get("/transactions?type_cat=income", verifyToken, getTransactions);
 router.get("/transactions?type_cat=expense", verifyToken, getTransactions);
 
 router.post("/transactions/add", verifyToken, createTransaction);
-router.put("/transactions/edit", verifyToken, updateTransaction); 
-router.delete("/transactions", verifyToken, deleteTransaction);
+router.put("/transactions/edit/:id", verifyToken, updateTransaction);
+router.delete("/transactions/delete/:id", verifyToken, deleteTransaction);
 
 // export router
 module.exports = router;
