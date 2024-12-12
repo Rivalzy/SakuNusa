@@ -8,7 +8,7 @@ const Transaction = require("./routes/transaction");
 require("dotenv").config();
 
 // destructing object process.env
-const PORT = process.env.PORT || 3306;
+const PORT = process.env.PORT || 3000;
 
 // membuat object express
 const app = express();
@@ -23,5 +23,5 @@ app.use(Transaction);
 
 // mendefinisikan port
 app.listen(PORT, () =>
-  console.log(`Server running at: http://localhost:${PORT}`)
+  console.log(`Server running at: http://0.0.0.0:${PORT}`)
 );
