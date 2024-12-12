@@ -2,7 +2,6 @@ const express = require("express");
 
 // import user controller
 const {
-  getAllUsers,
   getUserById,
   createUser,
   updateUser,
