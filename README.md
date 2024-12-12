@@ -1,4 +1,10 @@
 # SakuNusa Backend
+
+---
+### API Specification for SakuNusa
+**Base URL:**  
+`https://sakunusa-api-1043929878203.asia-southeast2.run.app/`
+
 ## How to run
 
 1. Clone this repository
