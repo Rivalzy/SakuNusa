@@ -1,6 +1,5 @@
 # SakuNusa Backend
 
----
 ### API Specification for SakuNusa
 **Base URL:**
 ```
@@ -27,4 +26,4 @@ npm install
 ```bash
 npm run start
 ```
-Server will run on port 8000
+Server will run on port 3000
