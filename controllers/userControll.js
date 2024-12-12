@@ -2,17 +2,6 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const db = require("../config/database");
 
-// mengambil semua data
-// exports.getAllUsers = (req, res) => {
-//   const query = "SELECT * FROM users";
-//   db.query(query, (err, results) => {
-//     if (err) {
-//       return res.status(500).json({ error: err.message });
-//     }
-//     res.json(results);
-//   });
-// };
-
 // mengambil data berdasarkan ID
 exports.getUserById = (req, res) => {
   // Ambil id_acc dari token yang sudah diverifikasi oleh verifyToken
@@ -25,7 +14,10 @@ exports.getUserById = (req, res) => {
     if (results.length === 0) {
       return res.status(404).json({ error: "User not found" });
     }
-    res.json(results[0]);
+    const user = { ...results[0] }; // Salin hasil agar aman untuk modifikasi
+    delete user.password;
+
+    res.json(user);
   });
 };
 

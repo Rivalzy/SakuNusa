@@ -1,22 +1,7 @@
 const dayjs = require("dayjs");
 const db = require("../config/database");
 
-// exports.getTransactions = (req, res) => {
-//   const query = `
-//     SELECT t.id_trans, t.amount, t.note, t.type_cat, t.date, c.name_cat AS category
-//     FROM transactions t
-//     LEFT JOIN category c ON t.id_cat = c.id_cat
-//   `;
-//   db.query(query, (err, results) => {
-//     if (err) {
-//       console.error(err);
-//       return res.status(500).json({ message: "Error fetching transaction" });
-//     }
-
-//     res.status(200).json(results);
-//   });
-// };
-
+// mengambil data transaksi 
 exports.getTransactions = (req, res) => {
   const { type_cat } = req.query;
   const id = req.user?.id_acc;
@@ -37,7 +22,6 @@ exports.getTransactions = (req, res) => {
     query += ` AND t.type_cat = ?`;
   }
 
-  // Jalankan query
   db.query(
     query,
     [id, type_cat ? type_cat.toLowerCase() : null],
