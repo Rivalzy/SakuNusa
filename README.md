@@ -4,7 +4,7 @@
 ![](assets/Architecture_cloud.png)
 
 ---
-### API Specification for SakuNusa
+### API
 **Base URL:**
 ```
 https://sakunusa-api-1043929878203.asia-southeast2.run.app
