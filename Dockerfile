@@ -7,13 +7,16 @@ WORKDIR /app
 COPY package*.json ./
 
 ENV JWT_SECRET = 
-ENV JWT_EXPIRES_IN = 1d
+ENV JWT_EXPIRES_IN = "1h"
 ENV PORT 3000
 
 # Copy all source files
 COPY . .
 
-RUN npm install
+# Install dependencies only for production
+RUN npm install --only=production
+
 EXPOSE 3000
 
-CMD [ "npm", "run", "start"]
+CMD ["node", "app.js"]
+

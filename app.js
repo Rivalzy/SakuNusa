@@ -21,6 +21,10 @@ app.use(express.json());
 app.use(User);
 app.use(Transaction);
 
+app.get("/", (req, res) => {
+  res.send("message : not found");
+});
+
 // mendefinisikan port
 app.listen(PORT, () =>
   console.log(`Server running at: http://0.0.0.0:${PORT}`)
