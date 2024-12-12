@@ -55,9 +55,9 @@ def test_manual_data(input_date, input_amount, scaler, model, sequence_length=10
 
 @app.get("/")
 def read_root():
-    return {"Status": "Sukses"}
+    return {"Message": "not found"}
 
-@app.post("/anom/")
+@app.post("/anomali/")
 def predict(test_data: TestData):
     try:
         # Menggunakan input dari permintaan
