@@ -9,12 +9,12 @@ https://sakunusaml-1043929878203.asia-southeast2.run.app
 ### **Endpoint: Anomali detect**  
 #### **Request**  
 **Method:** `POST`  
-**URL:** `/anomali`
+**URL:** `/anomali/`
 
 **Request Format**
-| field        | Type   | Required | Example | Description                       |  
-|--------------|--------|----------|---------|-----------------------------------|  
-| input_amount | float  | Yes      | 3000000 | The amount to check for anomalies |   
+| field        | Type   | Required | Example | 
+|--------------|--------|----------|---------|
+| input_amount | float  | Yes      | 3000000 |   
 
 ---
 #### **Response**  
