@@ -14,7 +14,7 @@ COPY . /app
 RUN apt-get update && apt-get install -y wget
 
 # Mengunduh file
-RUN wget -O MT.h5 https://storage.googleapis.com/tabi-translate/TextToText/MT.h5
+RUN wget -O model_v3.h5 https://storage.googleapis.com/sakunusa-app/model/model_v3.h5
 
 # Menginstal dependencies
 RUN pip install --upgrade pip
