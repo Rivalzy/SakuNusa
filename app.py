@@ -53,6 +53,10 @@ def test_manual_data(input_date, input_amount, scaler, model, sequence_length=10
     except Exception as e:
         raise ValueError(f"Error processing data: {e}")
 
+@app.get("/")
+def read_root():
+    return {"Status": "Sukses"}
+
 @app.post("/anom/")
 def predict(test_data: TestData):
     try:

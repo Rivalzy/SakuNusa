@@ -1,5 +1,5 @@
 # Menggunakan base image Python resmi dengan versi 3.9
-FROM python:3.10
+FROM python:3.9
 
 # Menetapkan direktori kerja dalam container
 WORKDIR /app
@@ -9,6 +9,9 @@ ENV PORT 8080
 
 # Menyalin file aplikasi ke dalam container
 COPY . /app
+
+RUN python -m venv /venv
+ENV PATH="/venv/bin:$PATH"
 
 # Menambahkan dependensi yang diperlukan untuk menggunakan wget
 RUN apt-get update && apt-get install -y wget
